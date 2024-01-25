@@ -5,7 +5,7 @@ jobs:
     machine:
       image: windows-default
       resource_class: windows.large
-    paralleism: 10
+    parallelism: 10
     steps:
       # Commands are run in a Windows virtual machine environment
         - checkout
