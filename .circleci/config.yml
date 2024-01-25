@@ -4,8 +4,7 @@ jobs:
   build: # name of your job
     resource_class: 'windows.medium'
     machine:
-      image: 'windows-server-2022-gui:current'
-      shell: 'powershell.exe -ExecutionPolicy Bypass'
+      image: 'windows-default'
     steps:
       # Commands are run in a Windows virtual machine environment
         - checkout
