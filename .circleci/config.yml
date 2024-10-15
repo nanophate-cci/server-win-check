@@ -4,8 +4,6 @@ jobs:
   build: # name of your job
     machine:
       image: windows-default
-      resource_class: windows.large
-    parallelism: 1
     steps:
       # Commands are run in a Windows virtual machine environment
         - checkout
