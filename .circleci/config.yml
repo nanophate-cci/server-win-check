@@ -5,9 +5,12 @@ jobs:
     machine:
       image: windows-default
     resource_class: windows.medium
-    shell: powershell.exe -ExecutionPolicy Bypass
     steps:
       # Commands are run in a Windows virtual machine environment
         - checkout
-        - run: Write-Host 'Hello, Windows'
-        - run: Invoke-RestMethod -Headers @{"X-aws-ec2-metadata-token" = $token} -Method GET -Uri http://169.254.169.254/latest/meta-data/ami-launch-index
+        - run:
+          command: Write-Host 'Hello, Windows'
+          shell: powershell.exe -ExecutionPolicy Bypass
+        - run:
+          command: curl http://169.254.169.254/latest/meta-data/ami-launch-index
+          shell: bash.exe
