@@ -5,6 +5,7 @@ jobs:
     machine:
       image: windows-default
     resource_class: windows.medium
+    shell: powershell.exe -ExecutionPolicy Bypass
     steps:
       # Commands are run in a Windows virtual machine environment
         - checkout
