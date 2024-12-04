@@ -8,7 +8,7 @@ jobs:
     steps:
         - checkout
         - run:
-            command: Write-Host 'Hello, Windows'
+            command: Write-Host 'Hello, Windo ws'
             shell: powershell.exe -ExecutionPolicy Bypass
         - run:
             command: curl http://169.254.169.254/latest/meta-data/ami-id
