@@ -19,3 +19,9 @@ jobs:
         - run:
             command: curl http://169.254.169.254/latest/meta-data/ami-launch-index
             shell: bash.exe
+        - run:
+            command: curl https://www.google.com
+            shell: bash.exe
+        - run:
+            command: curl https://runner.circleci.com
+            shell: bash.exe
